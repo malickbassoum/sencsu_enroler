@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+
 
 Route::get('/', function () {
     return view('auth.login');
@@ -17,3 +19,10 @@ Route::get('admin/posts', function () {
 Route::get('admin/list_benef', function () {
         return view('list_benef');
     }); 
+
+
+Route::group(['middleware' => ['auth']], function() {
+    Route::resource('roles', RoleController::class);
+    Route::resource('users', UserController::class);
+    Route::resource('products', ProductController::class);
+    });

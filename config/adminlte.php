@@ -322,8 +322,15 @@ return [
             'can' => 'manage-blog',
         ],
         [
-            'text' => 'Bénéficiaires',
-            'url' => 'admin/list_benef',
+            'text' => 'Produits',
+            'url' => 'admin/products/index',
+            'icon' => 'far fa-fw fa-file',
+            'label' => 4,
+            'label_color' => 'success',
+        ],
+        [
+            'text' => 'Utilisateurs',
+            'url' => 'users/index',
             'icon' => 'far fa-fw fa-file',
             'label' => 4,
             'label_color' => 'success',
